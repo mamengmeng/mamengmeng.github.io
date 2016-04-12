@@ -1,0 +1,16 @@
+body {
+    background-image: url(pmy.jpg);
+    background-repeat: repeat-xy;
+}
+
+h1 {
+    text-align: center;
+    /*color: #eee;*/
+    font-size: 64px;
+}
+
+p {
+    /*color: #eee;*/
+    text-indent: 2em;
+    width: 700px;
+}
