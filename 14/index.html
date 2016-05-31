@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>过度动画练习</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    .box {
+    background: #2db34a;
+    border-radius: 6px;
+    transition-property: background, border-radius;
+    transition-duration: .1s, 0.3s;
+    transition-timing-function: linear;
+}
+
+.box:hover {
+    background: #ff7b29;
+    border-radius: 50%;
+}
+
+.card-container {
+    cursor: pointer;
+    height: 150px;
+    perspective: 200;
+    position: relative;
+    width: 150px;
+}
+
+.card {
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    width: 100%;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.side {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+.back {
+    background: #eaeaed;
+    color: #0087cc;
+    line-height: 150px;
+    text-align: center;
+    transform: rotateY(180deg);
+</style>
+
+<body>
+    <div class="box box"> box </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="side"><img src=mnm.jpg alt="海拉尔的 冬"></div>
+            <div class="side back">海拉尔的冬</div>
+        </div>
+    </div>
+</body>
+
+</html>
